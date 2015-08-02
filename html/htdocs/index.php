@@ -18,7 +18,11 @@
  * NOTE: If you change these, also change the error_reporting() code below
  *
  */
+if ( file_exists('../application/config/environment.php') ) {
+	require_once('../application/config/environment.php');
+} else {
 	define('ENVIRONMENT', 'development');
+}
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
@@ -56,7 +60,7 @@ if (defined('ENVIRONMENT'))
  * as this file.
  *
  */
-	$system_path = 'system';
+	$system_path = '../system';
 
 /*
  *---------------------------------------------------------------
@@ -72,7 +76,7 @@ if (defined('ENVIRONMENT'))
  * NO TRAILING SLASH!
  *
  */
-	$application_folder = 'application';
+	$application_folder = '../application';
 
 /*
  * --------------------------------------------------------------------
