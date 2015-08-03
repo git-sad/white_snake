@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Top extends CI_Controller {
+class Top extends MY_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -19,14 +19,11 @@ class Top extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->model('Log_access_model', 'log_access');
 		$this->load->model('Article_model', 'article');
 		
 		$data['article'] = $this->article->get_all();
 		
 		$this->load->view('top', $data);
-		
-		$this->log_access->insert();
 	}
 }
 
