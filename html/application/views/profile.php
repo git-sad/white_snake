@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-		<title>4 people house</title>
+		<title>4 people house - Profile</title>
 
 		<!-- Bootstrap -->
 		<link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -25,37 +25,21 @@
 		</header>
 		
 		<ul class="nav nav-tabs">
-			<li class="active"><a href="#">Home</a></li>
-			<li><a href="/profile">Profile</a></li>
+			<li><a href="/top">Home</a></li>
+			<li class="active"><a href="#">Profile</a></li>
 		</ul>
 		
-		<?= $pages_top ?>
-		
-		<? $i = 1; ?>
-		<? foreach($article as $ac) { ?>
-			<div id="article<?= $i ?>" align="left">
+		<div id="profile" align="left">
 			<div class="panel panel-info">
 				<div class="panel-heading">
-					<span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
-					<?= $ac->ac_title ?>
-					　<small><?= $ac->ac_regdate ?></small>
-					　<span class="badge">New</span>
+					<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+					Profile
 				</div>
 				<div class="panel-body">
-					<?= $ac->ac_content ?>
-					<br />
-					<div id="info<?= $i ?>" align="right">
-					<span class="info" style="font-size:12px; color:#004B91;"><?= $ac->ac_info ?></span>
-					|
-					<span class="tag" style="font-size:10px; color:#004B91;"><?= $ac->ac_tag ?></span>
-					</div><!-- id=info<?= $i ?> -->
+					性別: 男<br />
 				</div>
 			</div><!-- panel -->
-			</div><!-- id=article<?= $i ?> -->
-			<? $i++; ?>
-		<? } // foreach $article ?>
-		
-		<?= $pages_bottom ?>
+		</div><!-- id=profile -->
 		
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
