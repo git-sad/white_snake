@@ -57,7 +57,7 @@ class Top extends MY_Controller {
 		$data['pages_top'] = $pages_top;
 		$data['pages_bottom'] = $pages_bottom;
 		
-		$this->load->view('top', $data);
+		$this->load->view($this->get_theme('top'), $data);
 	}
 }
 
