@@ -4,8 +4,10 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="4ph管理人のプロフィールです。関東圏に4人家族で生活しているおっさんSEですが、気持ちは若いですよ。PHP、Java、Ruby、C、C++等様々な言語を操るマニアです。お見知り置きを。" />
+		<meta name="keywords" content="4ph,CodeIgniter,VPS,ブログ,GitHub,SE,勉強,プロフィール,Profile" />
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-		<title>4 people house - Profile</title>
+		<title>VPS、仮想環境、PHP、CodeIgniter、様々な日常を記録している人 | 4 people house - Profile</title>
 
 		<!-- Bootstrap -->
 		<link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -20,7 +22,7 @@
 	<body>
 		<center>
 		<header id="header">
-			<a href="/top"><img src="/img/4_people_house.png" width="100%" alt="4 people house" /></a>
+			<a href="/top"><img src="/img/4_people_house.png" width="100%" alt="VPS、仮想環境、PHP、CodeIgniter、様々な日常を記録している人の「4 people house」" /></a>
 		</header>
 		
 		<ul class="nav nav-tabs">

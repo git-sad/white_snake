@@ -21,6 +21,7 @@ class Top extends MY_Controller {
 		
 		$this->load->model('Article_model', 'article');
 		$this->load->library('pagination');
+		$this->load->library('markdown');
 		
 		$total_rows = $this->article->get_count_all();
 		
@@ -53,7 +54,11 @@ class Top extends MY_Controller {
 		$config['full_tag_open'] = '<div id="pagination_top" align="right"><nav><ul class="pagination">';
 		$pages_bottom = $this->pagination->create_links();
 		
-		$data['article'] = $this->article->get_all(10, $page);
+		$ary_article = $this->article->get_all(10, $page);
+		foreach($ary_article as $k => $v) {
+			$ary_article[$k]->ac_content = $this->markdown->parse($ary_article[$k]->ac_content);
+		}
+		$data['article'] = $ary_article;
 		$data['pages_top'] = $pages_top;
 		$data['pages_bottom'] = $pages_bottom;
 		
