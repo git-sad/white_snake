@@ -4,8 +4,8 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="4ph管理人のプロフィールです。関東圏に4人家族で生活しているおっさんSEですが、気持ちは若いですよ。PHP、Java、Ruby、C、C++等様々な言語を操るマニアです。お見知り置きを。" />
-		<meta name="keywords" content="4ph,CodeIgniter,VPS,ブログ,GitHub,SE,勉強,プロフィール,Profile" />
+		<meta name="description" content="FourPH管理人のプロフィールです。関東圏に4人家族で生活しているおっさんSEですが、気持ちは若いですよ。PHP、Java、Ruby、C、C++等様々な言語を操るマニアです。お見知り置きを。" />
+		<meta name="keywords" content="FourPH,CodeIgniter,VPS,ブログ,GitHub,SE,勉強,プロフィール,Profile" />
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 		<title>VPS、仮想環境、PHP、CodeIgniter、様々な日常を記録している人 | 4 people house - Profile</title>
 

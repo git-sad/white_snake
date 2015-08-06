@@ -4,8 +4,8 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="こんにちは、4ph管理人です。都内の会社でSEをしながら、PHP、CodeIgniterの勉強、利用をしています。まずはServersMan@VPS、CodeIgniterを利用してブログ「white_snake」を構築しています。GitHubでも公開していますので、是非御覧下さい。" />
-		<meta name="keywords" content="4ph,CodeIgniter,VPS,GitHub,SE,勉強,ブログ,Blog,トップ,Top" />
+		<meta name="description" content="こんにちは、FourPH管理人です。都内の会社でSEをしながら、PHP、CodeIgniterの勉強、利用をしています。まずはServersMan@VPS、CodeIgniterを利用してブログ「white_snake」を構築しています。GitHubでも公開していますので、是非御覧下さい。" />
+		<meta name="keywords" content="FourPH,CodeIgniter,VPS,GitHub,SE,勉強,ブログ,Blog,トップ,Top" />
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 		<title>VPS、仮想環境、PHP、CodeIgniter、様々な日常を記録 | 4 people house</title>
 
