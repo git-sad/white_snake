@@ -42,7 +42,7 @@
 				<div class="panel-heading">
 					<span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
 					<?= $ac->ac_title ?>
-					　<small><?= $ac->ac_regdate ?></small>
+					　<small><?= date('Y-m-d H:i', strtotime($ac->ac_regdate)) ?></small>
 					　<span class="badge">New</span>
 				</div>
 				<div class="panel-body">
