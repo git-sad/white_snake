@@ -46,6 +46,7 @@ ALTER TABLE article AUTO_INCREMENT = 1;
 
 CREATE TABLE comment (
 cm_id INT PRIMARY KEY AUTO_INCREMENT, 
+cm_article_id INT NOT NULL, 
 cm_content TEXT NOT NULL, 
 cm_name TEXT NOT NULL, 
 cm_log_access_id INT NOT NULL, 
