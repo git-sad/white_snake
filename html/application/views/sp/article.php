@@ -23,9 +23,8 @@
 	</head>
 	<body>
 		<center>
-		<div style="width:950px;">
 		<header id="header">
-			<a href="/top"><img src="/img/4_people_house.png" alt="VPS、仮想環境、PHP、CodeIgniter、様々な日常を記録した記事「4 people house」" /></a>
+			<a href="/top"><img src="/img/4_people_house.png" width="100%" alt="VPS、仮想環境、PHP、CodeIgniter、様々な日常を記録した記事「4 people house」" /></a>
 		</header>
 		
 		<ul class="nav nav-tabs">
@@ -113,7 +112,6 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="/js/bootstrap.min.js"></script>
-		</div><!-- width:950px; -->
 		</center>
 	</body>
 </html>

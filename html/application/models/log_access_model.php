@@ -18,6 +18,9 @@ class Log_access_model extends CI_Model {
 		$data['la_regdate'] = date("Y-m-d H:i:s");
 		
 		$this->db->insert('log_access', $data);
+		
+		$id = $this->db->insert_id();
+		$this->session->set_userdata('log_access_id', $id);
 	}
 }
 

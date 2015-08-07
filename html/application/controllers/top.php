@@ -20,6 +20,7 @@ class Top extends MY_Controller {
 	public function index($page = 0) {
 		
 		$this->load->model('Article_model', 'article');
+		$this->load->model('Comment_model', 'comment');
 		$this->load->library('pagination');
 		$this->load->library('markdown');
 		
@@ -54,11 +55,15 @@ class Top extends MY_Controller {
 		$config['full_tag_open'] = '<div id="pagination_top" align="right"><nav><ul class="pagination">';
 		$pages_bottom = $this->pagination->create_links();
 		
+		$ary_comment_count = array();
 		$ary_article = $this->article->get_all(10, $page);
 		foreach($ary_article as $k => $v) {
 			$ary_article[$k]->ac_content = $this->markdown->parse($ary_article[$k]->ac_content);
+			$ary_comment_count[$v->ac_id] = $this->comment->get_count_all($v->ac_id);
 		}
+		
 		$data['article'] = $ary_article;
+		$data['comment_count'] = $ary_comment_count;
 		$data['pages_top'] = $pages_top;
 		$data['pages_bottom'] = $pages_bottom;
 		

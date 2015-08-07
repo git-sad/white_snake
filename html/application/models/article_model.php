@@ -16,6 +16,13 @@ class Article_model extends CI_Model {
 		$query = $this->db->get('article');
 		return $query->result();
 	}
+	
+	public function get_one($id = 0) {
+		$this->db->where('ac_id', $id);
+		$this->db->order_by('ac_regdate', 'DESC');
+		$query = $this->db->get('article');
+		return $query->result();
+	}
 }
 
 /* End of file article_model.php */
