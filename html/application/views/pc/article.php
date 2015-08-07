@@ -94,7 +94,7 @@
 			$autofocus = 'comment';
 		}
 		?>
-		<form action="/article/register/<?= $ac->ac_id ?>/" method="post">
+		<form action="/article/reg_comment/<?= $ac->ac_id ?>/" method="post">
 		<div id="comment_form" class="form-group" align="left">
 			<label for="name">名前</label>
 			<?= form_error('name') === '' ? '' : '<div style="color:red; font-weight:bold;">'.mb_convert_encoding(form_error('name'), 'UTF-8', 'SJIS').'</div>' ?>

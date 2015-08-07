@@ -35,7 +35,7 @@ class Article extends MY_Controller {
 		$this->load->view($this->get_theme('article'), $data);
 	}
 	
-	public function register($id = 0) {
+	public function reg_comment($id = 0) {
 		
 		$this->load->model('Comment_model', 'comment');
 		$this->load->helper('url');
