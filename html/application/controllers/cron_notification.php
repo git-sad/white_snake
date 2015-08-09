@@ -45,22 +45,19 @@ class Cron_notification extends CI_Controller {
 			var_dump($msg);
 			
 			// メール設定
-			$config['protocol'] = 'sendmail';
-			$config['mailpath'] = '/usr/sbin/sendmail';
-			$config['charset']  = 'UTF-8';
-			$config['wordwrap'] = TRUE;
-			
-			$this->email->initialize($config);
+			$this->email->set_newline("\r\n");
 			
 			// メール送信
-			$this->email->from('4peoplehouse@gmail.com', '4 people house');
-			$this->email->to('4peoplehouse@gmail.com');
-			$this->email->subject('アクセスログ通知['.$date.']');
+			$this->email->from('****@****', '****');
+			$this->email->to('****@****');
+			$this->email->subject(mb_convert_encoding('アクセスログ通知['.$date.']', 'UTF-8', 'SJIS'));
 			$this->email->message($msg);
 			
-//			$this->email->send();
-			
-			var_dump($this->email->print_debugger());
+			if($this->email->send()) {
+				echo mb_convert_encoding('メール送信成功', 'UTF-8', 'SJIS')."\n";
+			} else {
+				var_dump($this->email->print_debugger());
+			}
 		}
 	}
 }
