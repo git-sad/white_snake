@@ -41,8 +41,7 @@ class Cron_notification extends CI_Controller {
 			$msg .= '[base_url]'."\n";
 			$msg .= $this->config->base_url()."\n";
 			$msg .= '以上'."\n";
-			$msg = mb_convert_encoding($msg, 'UTF-8', 'SJIS');
-			var_dump($msg);
+			var_dump(mb_convert_encoding($msg, 'UTF-8', 'SJIS'));
 			
 			// メール設定
 			$this->email->set_newline("\r\n");
@@ -50,8 +49,8 @@ class Cron_notification extends CI_Controller {
 			// メール送信
 			$this->email->from('****@****', '****');
 			$this->email->to('****@****');
-			$this->email->subject(mb_convert_encoding('アクセスログ通知['.$date.']', 'UTF-8', 'SJIS'));
-			$this->email->message($msg);
+			$this->email->subject(mb_convert_encoding('FourPH Info['.$date.']', 'UTF-8', 'SJIS'));
+			$this->email->message(mb_convert_encoding($msg, 'UTF-8', 'SJIS'));
 			
 			if($this->email->send()) {
 				echo mb_convert_encoding('メール送信成功', 'UTF-8', 'SJIS')."\n";
