@@ -21,7 +21,7 @@ class Comment_model extends CI_Model {
 	}
 	
 	public function insert($article_id, $name, $comment) {
-		$this->load->library('session');
+		$this->load->driver('session');
 		
 		$regdate = date('Y-m-d H:i:s');
 		
