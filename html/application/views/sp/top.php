@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="こんにちは、FourPH管理人です。都内の会社でSEをしながら、PHP、CodeIgniterの勉強、利用をしています。まずはServersMan@VPS、CodeIgniterを利用してブログ「white_snake」を構築しています。GitHubでも公開していますので、是非御覧下さい。" />
-		<meta name="keywords" content="FourPH,CodeIgniter,VPS,GitHub,SE,勉強,ブログ,Blog,トップ,Top" />
+		<meta name="description" content="����ɂ��́AFourPH�Ǘ��l�ł��B�s���̉�Ђ�SE�����Ȃ���APHP�ACodeIgniter�̕׋��A���p�����Ă��܂��B�܂���ServersMan@VPS�ACodeIgniter�𗘗p���ău���O�uwhite_snake�v���\�z���Ă��܂��BGitHub�ł����J���Ă��܂��̂ŁA����䗗�������B" />
+		<meta name="keywords" content="FourPH,CodeIgniter,VPS,GitHub,SE,�׋�,�u���O,Blog,�g�b�v,Top" />
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-		<title>VPS、仮想環境、PHP、CodeIgniter、様々な日常を記録 | 4 people house</title>
+		<title>VPS�A���z���APHP�ACodeIgniter�A�l�X�ȓ�����L�^ | 4 people house</title>
 
 		<!-- Bootstrap -->
 		<link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -24,7 +24,7 @@
 	<body>
 		<center>
 		<header id="header">
-			<a href="/top"><img src="/img/4_people_house.png" width="100%" alt="VPS、仮想環境、PHP、CodeIgniter、様々な日常を記録する「4 people house」" /></a>
+			<a href="/top"><img src="/img/4_people_house.png" width="100%" alt="VPS�A���z���APHP�ACodeIgniter�A�l�X�ȓ�����L�^����u4 people house�v" /></a>
 		</header>
 		
 		<ul class="nav nav-tabs">
@@ -39,12 +39,12 @@
 				<div class="panel-heading">
 					<span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
 					<?= $ac->ac_title ?>
-					　<small><?= date('Y-m-d H:i', strtotime($ac->ac_regdate)) ?></small>
-					　
+					�@<small><?= date('Y-m-d H:i', strtotime($ac->ac_regdate)) ?></small>
+					�@
 					<? if(strtotime('- 7 days') < strtotime($ac->ac_regdate)) { ?>
 						<span class="badge">New</span>
 					<? } ?>
-					<span class="badge" style="background-color:#FDFF54; color:#000000;">コメ<?= $comment_count[$ac->ac_id] ?></span>
+					<span class="badge" style="background-color:#FDFF54; color:#000000;">�R��<?= $comment_count[$ac->ac_id] ?></span>
 				</div>
 				<div class="panel-body">
 					<?= $ac->ac_content ?>
@@ -56,7 +56,7 @@
 				</div>
 				<div id="comment<?= $i ?>" align="right">
 					<form action="/article/index/<?= $ac->ac_id ?>/" method="post">
-						<button type="submit" class="btn btn-default btn-xs">コメント (<?= $comment_count[$ac->ac_id] ?>) </button><br />
+						<button type="submit" class="btn btn-default btn-xs">�R�����g (<?= $comment_count[$ac->ac_id] ?>) </button><br />
 					</form>
 				</div><!-- id=comment<?= $i ?> -->
 			</div><!-- panel -->
