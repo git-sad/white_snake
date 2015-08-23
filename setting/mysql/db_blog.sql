@@ -55,3 +55,13 @@ cm_regdate DATETIME NOT NULL,
 cm_moddate DATETIME NOT NULL 
 );
 ALTER TABLE comment AUTO_INCREMENT = 1;
+
+CREATE TABLE IF NOT EXISTS `ci_sessions` (
+`id` varchar(40) NOT NULL,
+`ip_address` varchar(45) NOT NULL,
+`timestamp` int(10) unsigned DEFAULT 0 NOT NULL,
+`data` blob NOT NULL,
+PRIMARY KEY (id),
+KEY `ci_sessions_timestamp` (`timestamp`)
+);
+ALTER TABLE ci_sessions ADD CONSTRAINT ci_sessions_id_ip UNIQUE (id, ip_address);
