@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="FourPH管理人のプロフィールです。関東圏に4人家族で生活しているおっさんSEですが、気持ちは若いですよ。PHP、Java、Ruby、C、C++等様々な言語を操るマニアです。お見知り置きを。" />
-		<meta name="keywords" content="FourPH,CodeIgniter,VPS,ブログ,GitHub,SE,勉強,プロフィール,Profile" />
+		<meta name="description" content="FourPH�Ǘ��l�̃v���t�B�[���ł��B�֓�����4�l�Ƒ��Ő������Ă��邨������SE�ł����A�C�����͎Ⴂ�ł���BPHP�AJava�ARuby�AC�AC++���l�X�Ȍ���𑀂�}�j�A�ł��B�����m��u�����B" />
+		<meta name="keywords" content="FourPH,CodeIgniter,VPS,�u���O,GitHub,SE,�׋�,�v���t�B�[��,Profile" />
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-		<title>VPS、仮想環境、PHP、CodeIgniter、様々な日常を記録している人 | 4 people house - Profile</title>
+		<title>VPS�A���z���APHP�ACodeIgniter�A�l�X�ȓ�����L�^���Ă���l | 4 people house - Profile</title>
 
 		<!-- Bootstrap -->
 		<link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 		<center>
 		<div style="width:950px;">
 		<header id="header">
-			<a href="/top"><img src="/img/4_people_house.png" alt="VPS、仮想環境、PHP、CodeIgniter、様々な日常を記録している人の「4 people house」" /></a>
+			<a href="/top"><img src="/img/4_people_house.png" alt="VPS�A���z���APHP�ACodeIgniter�A�l�X�ȓ�����L�^���Ă���l�́u4 people house�v" /></a>
 		</header>
 		
 		<ul class="nav nav-tabs">
@@ -38,7 +38,7 @@
 					Profile
 				</div>
 				<div class="panel-body">
-					性別: 男<br />
+					����: �j<br />
 				</div>
 			</div><!-- panel -->
 		</div><!-- id=profile -->
