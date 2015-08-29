@@ -3,7 +3,7 @@
 $config["protocol"] = "smtp";
 $config["smtp_host"] = "****";
 $config["smtp_port"] = "***";
-$config["smtp_usre"] = "****";
+$config["smtp_user"] = "****";
 $config["smtp_pass"] = "****";
 
 /* End of file email.php */
