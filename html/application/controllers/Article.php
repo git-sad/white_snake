@@ -41,11 +41,11 @@ class Article extends MY_Controller {
 		$this->load->helper('url');
 		$this->load->library('form_validation');
 		
-		$this->form_validation->set_message('required', '%s ‚ª“ü—Í‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB');
-		$this->form_validation->set_message('max_length', '%s ‚ÍÅ‘å %s •¶š‚Å‚·B');
+		$this->form_validation->set_message('required', '%s ãŒå…¥åŠ›ã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚');
+		$this->form_validation->set_message('max_length', '%s ã¯æœ€å¤§ %s æ–‡å­—ã§ã™ã€‚');
 		
-		$this->form_validation->set_rules('name', '–¼‘O', 'max_length[256]');
-		$this->form_validation->set_rules('comment', 'ƒRƒƒ“ƒg', 'required|max_length[2048]');
+		$this->form_validation->set_rules('name', 'åå‰', 'max_length[256]');
+		$this->form_validation->set_rules('comment', 'ã‚³ãƒ¡ãƒ³ãƒˆ', 'required|max_length[2048]');
 		
 		if($this->form_validation->run() == FALSE) {
 			$this->index($id);
