@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="FourPHŠÇ—l‚Å‚·B<?= count($article) === 0 ? 'ŠY“–‹LŽ––³‚µ' : $article[0]->ac_title ?>‚É‚Â‚¢‚Ä‹LŽ–‚É‚µ‚Ü‚µ‚½IƒRƒƒ“ƒg‚æ‚ë‚µ‚­‚¨Šè‚¢‚µ‚Ü‚·B–¢‚¾–¢‚¾•×‹­’†‚Å‚·B" />
-		<meta name="keywords" content="FourPH,CodeIgniter,VPS,GitHub,SE,•×‹­,ƒuƒƒO,Blog,‹LŽ–,Article" />
+		<meta name="description" content="FourPHç®¡ç†äººã§ã™ã€‚<?= count($article) === 0 ? 'è©²å½“è¨˜äº‹ç„¡ã—' : $article[0]->ac_title ?>ã«ã¤ã„ã¦è¨˜äº‹ã«ã—ã¾ã—ãŸï¼ã‚³ãƒ¡ãƒ³ãƒˆã‚ˆã‚ã—ããŠé¡˜ã„ã—ã¾ã™ã€‚æœªã æœªã å‹‰å¼·ä¸­ã§ã™ã€‚" />
+		<meta name="keywords" content="FourPH,CodeIgniter,VPS,GitHub,SE,å‹‰å¼·,ãƒ–ãƒ­ã‚°,Blog,è¨˜äº‹,Article" />
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-		<title>VPSA‰¼‘zŠÂ‹«APHPACodeIgniterA—lX‚È“úí‚ð‹L˜^‚µ‚½‹LŽ–‚ÌÚ× | 4 people house</title>
+		<title>VPSã€ä»®æƒ³ç’°å¢ƒã€PHPã€CodeIgniterã€æ§˜ã€…ãªæ—¥å¸¸ã‚’è¨˜éŒ²ã—ãŸè¨˜äº‹ã®è©³ç´° | 4 people house</title>
 
 		<!-- Bootstrap -->
 		<link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -25,7 +25,7 @@
 		<center>
 		<div style="width:950px;">
 		<header id="header">
-			<a href="/top"><img src="/img/4_people_house.png" alt="VPSA‰¼‘zŠÂ‹«APHPACodeIgniterA—lX‚È“úí‚ð‹L˜^‚µ‚½‹LŽ–u4 people housev" /></a>
+			<a href="/top"><img src="/img/4_people_house.png" alt="VPSã€ä»®æƒ³ç’°å¢ƒã€PHPã€CodeIgniterã€æ§˜ã€…ãªæ—¥å¸¸ã‚’è¨˜éŒ²ã—ãŸè¨˜äº‹ã€Œ4 people houseã€" /></a>
 		</header>
 		
 		<ul class="nav nav-tabs">
@@ -34,11 +34,11 @@
 		</ul>
 		
 		<div id="breadcrumb" align="left">
-		<a href="/">ˆê——</a> ><br />
+		<a href="/">ä¸€è¦§</a> ><br />
 		</div><!-- breadcrumb -->
 		
 		<? if(count($article) == 0) { ?>
-			ŠY“–‹LŽ–‚Í‘¶Ý‚µ‚Ü‚¹‚ñB<br />
+			è©²å½“è¨˜äº‹ã¯å­˜åœ¨ã—ã¾ã›ã‚“ã€‚<br />
 			<br />
 		<? } else { ?>
 		
@@ -48,12 +48,12 @@
 			<div class="panel-heading">
 				<span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
 				<?= $ac->ac_title ?>
-				@<small><?= date('Y-m-d H:i', strtotime($ac->ac_regdate)) ?></small>
-				@
+				ã€€<small><?= date('Y-m-d H:i', strtotime($ac->ac_regdate)) ?></small>
+				ã€€
 				<? if(strtotime('- 7 days') < strtotime($ac->ac_regdate)) { ?>
 					<span class="badge">New</span>
 				<? } ?>
-				<span class="badge" style="background-color:#FDFF54; color:#000000;">ƒRƒ<?= count($comment) ?></span>
+				<span class="badge" style="background-color:#FDFF54; color:#000000;">ã‚³ãƒ¡<?= count($comment) ?></span>
 			</div>
 			<div class="panel-body">
 				<?= $ac->ac_content ?>
@@ -68,18 +68,18 @@
 		
 		<? $i = 1; ?>
 		<div id="comment" align="left">
-		<button type="button" class="btn btn-default btn-xs">ƒRƒƒ“ƒg</button><br />
+		<button type="button" class="btn btn-default btn-xs">ã‚³ãƒ¡ãƒ³ãƒˆ</button><br />
 		<br />
 		
 		<? foreach($comment as $cm) { ?>
-			<? $cm_name = $cm->cm_name ?: '–¼–³‚µ‚³‚ñ'; ?>
+			<? $cm_name = $cm->cm_name ?: 'åç„¡ã—ã•ã‚“'; ?>
 			<p>
 			<?= htmlentities($cm->cm_content, ENT_QUOTES, 'UTF-8') ?>
 			</p>
 			<hr size="1px" style="margin:1px;" />
 			<p>
 			<div id="user_info" align="right" style="font-size:12px; color:#cccccc;">
-			<?= date('Y-m-d H:i', strtotime($cm->cm_regdate)) ?>@<?= htmlentities($cm_name, ENT_QUOTES, 'UTF-8') ?><br />
+			<?= date('Y-m-d H:i', strtotime($cm->cm_regdate)) ?>ã€€<?= htmlentities($cm_name, ENT_QUOTES, 'UTF-8') ?><br />
 			</div><!-- user_info -->
 			</p>
 		<? } // foreach $comment ?>
@@ -96,14 +96,14 @@
 		?>
 		<form action="/article/reg_comment/<?= $ac->ac_id ?>/" method="post">
 		<div id="comment_form" class="form-group" align="left">
-			<label for="name">–¼‘O</label>
+			<label for="name">åå‰</label>
 			<?= form_error('name') === '' ? '' : '<div style="color:red; font-weight:bold;">'.mb_convert_encoding(form_error('name'), 'UTF-8', 'SJIS').'</div>' ?>
-			<input name="name" id="name" type="text" class="form-control" style="ime-mode: active;" placeholder="–¼–³‚µ‚³‚ñ" value="<?= set_value('name') ?>"<?= $autofocus == 'name' ? ' autofocus' : '' ?> />
-			<label for="comment">ƒRƒƒ“ƒg</label>
+			<input name="name" id="name" type="text" class="form-control" style="ime-mode: active;" placeholder="åç„¡ã—ã•ã‚“" value="<?= set_value('name') ?>"<?= $autofocus == 'name' ? ' autofocus' : '' ?> />
+			<label for="comment">ã‚³ãƒ¡ãƒ³ãƒˆ</label>
 			<?= form_error('comment') === '' ? '' : '<div style="color:red; font-weight:bold;">'.mb_convert_encoding(form_error('comment'), 'UTF-8', 'SJIS').'</div>' ?>
 			<textarea name="comment" class="form-control" rows="3" style="ime-mode: active;"<?= $autofocus == 'comment' ? ' autofocus' : '' ?>><?= set_value('comment') ?></textarea>
 			
-			<button type="submit" class="btn btn-primary btn-xs">ƒRƒƒ“ƒg‚ð“Še</button><br />
+			<button type="submit" class="btn btn-primary btn-xs">ã‚³ãƒ¡ãƒ³ãƒˆã‚’æŠ•ç¨¿</button><br />
 		</div>
 		</form>
 		
