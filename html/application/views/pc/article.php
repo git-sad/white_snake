@@ -72,7 +72,7 @@
 		<br />
 		
 		<? foreach($comment as $cm) { ?>
-			<? $cm_name = $cm->cm_name === '' ? '–¼–³‚µ‚³‚ñ' : $cm->cm_name; ?>
+			<? $cm_name = $cm->cm_name ?: '–¼–³‚µ‚³‚ñ'; ?>
 			<p>
 			<?= htmlentities($cm->cm_content, ENT_QUOTES, 'UTF-8') ?>
 			</p>

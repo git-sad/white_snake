@@ -17,7 +17,7 @@ class Cron_notification extends CI_Controller {
 		if($this->input->is_cli_request() === FALSE) {
 			echo 'No execution.<br />';
 		} else {
-			$date = is_null($date) ? date('Y-m-d', strtotime('- 1 day')) : $date;
+			$date = $date ?: date('Y-m-d', strtotime('- 1 day'));
 			
 			$ary_log = $this->log_access->get_day($date);
 			
