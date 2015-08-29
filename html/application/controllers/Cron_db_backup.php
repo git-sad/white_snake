@@ -18,7 +18,7 @@ class Cron_db_backup extends CI_Controller {
 		$backup_date = date('Ymd_His');
 		write_file('/tmp/db_blog_'.$backup_date.'.sql', $backup);
 		
-		echo mb_convert_encoding('バックアップ完了 ['.$backup_date.']', 'UTF-8', 'SJIS')."\n";
+		echo mb_convert_encoding('繝舌ャ繧ｯ繧｢繝�繝怜ｮ御ｺ� ['.$backup_date.']', 'UTF-8', 'SJIS')."\n";
 	}
 }
 

@@ -21,9 +21,9 @@ class Cron_notification extends CI_Controller {
 			
 			$ary_log = $this->log_access->get_day($date);
 			
-			// –{•¶ì¬
-			$msg = 'ð“ú('.$date.')‚ÌƒAƒNƒZƒXƒƒO‚ðƒ[ƒ‹‚µ‚Ü‚·B'."\n";
-			$msg .= '[ˆê”Ê]'."\n";
+			// æœ¬æ–‡ä½œæˆ
+			$msg = 'æ˜¨æ—¥('.$date.')ã®ã‚¢ã‚¯ã‚»ã‚¹ãƒ­ã‚°ã‚’ãƒ¡ãƒ¼ãƒ«ã—ã¾ã™ã€‚'."\n";
+			$msg .= '[ä¸€èˆ¬]'."\n";
 			foreach($ary_log as $log) {
 				if(array_key_exists($log->la_host_name.':'.$log->la_ip, $ary_exempt_host_name) === TRUE) {
 					$ary_exempt_host_name[$log->la_host_name.':'.$log->la_ip] = intval($log->num);
@@ -32,7 +32,7 @@ class Cron_notification extends CI_Controller {
 				}
 			}
 			arsort($ary_exempt_host_name);
-			$msg .= '[ŠÇ—]'."\n";
+			$msg .= '[ç®¡ç†]'."\n";
 			foreach($ary_exempt_host_name as $k => $v) {
 				if(0 < $v) {
 					$msg .= ' '.$k.' => '.$v."\n";
@@ -40,20 +40,20 @@ class Cron_notification extends CI_Controller {
 			}
 			$msg .= '[base_url]'."\n";
 			$msg .= $this->config->base_url()."\n";
-			$msg .= 'ˆÈã'."\n";
+			$msg .= 'ä»¥ä¸Š'."\n";
 			var_dump(mb_convert_encoding($msg, 'UTF-8', 'SJIS'));
 			
-			// ƒ[ƒ‹Ý’è
+			// ãƒ¡ãƒ¼ãƒ«è¨­å®š
 			$this->email->set_newline("\r\n");
 			
-			// ƒ[ƒ‹‘—M
+			// ãƒ¡ãƒ¼ãƒ«é€ä¿¡
 			$this->email->from('****@****', '****');
 			$this->email->to('****@****');
 			$this->email->subject(mb_convert_encoding('FourPH Info['.$date.']', 'UTF-8', 'SJIS'));
 			$this->email->message(mb_convert_encoding($msg, 'UTF-8', 'SJIS'));
 			
 			if($this->email->send()) {
-				echo mb_convert_encoding('ƒ[ƒ‹‘—M¬Œ÷', 'UTF-8', 'SJIS')."\n";
+				echo mb_convert_encoding('ãƒ¡ãƒ¼ãƒ«é€ä¿¡æˆåŠŸ', 'UTF-8', 'SJIS')."\n";
 			} else {
 				var_dump($this->email->print_debugger());
 			}
