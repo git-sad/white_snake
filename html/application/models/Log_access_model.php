@@ -25,7 +25,7 @@ class Log_access_model extends CI_Model {
 		$data['la_port'] = $this->input->server('REMOTE_PORT');
 		$data['la_user_agent'] = $this->input->user_agent();
 		$data['la_referrer'] = $this->input->server('HTTP_REFERER') ?: '';
-		$data['la_request_uri'] = preg_replace('/\/index\.php/', '', $this->input->server('PHP_SELF'), 1);
+		$data['la_request_uri'] = preg_replace('/\/index\.php/', '', $this->input->server('REQUEST_URI'), 1);
 		$data['la_session_id'] = session_id();
 		$data['la_regdate'] = date("Y-m-d H:i:s");
 		
