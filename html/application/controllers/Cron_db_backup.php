@@ -13,12 +13,13 @@ class Cron_db_backup extends CI_Controller {
 		$prefs['add_insert'] = TRUE;
 		$prefs['newline'] = "\n";
 		
-		$backup =& $this->dbutil->backup($prefs);
+//		$backup =& $this->dbutil->backup($prefs);
+		$backup = $this->dbutil->backup($prefs);
 		
 		$backup_date = date('Ymd_His');
 		write_file('/tmp/db_blog_'.$backup_date.'.sql', $backup);
 		
-		echo mb_convert_encoding('バックアップ完了 ['.$backup_date.']', 'UTF-8', 'SJIS')."\n";
+		echo 'バックアップ完了 ['.$backup_date.']'."\n";
 	}
 }
 
