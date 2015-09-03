@@ -23,5 +23,5 @@ class Profile extends MY_Controller {
 	}
 }
 
-/* End of file profile.php */
-/* Location: ./application/controllers/profile.php */
+/* End of file Profile.php */
+/* Location: ./application/controllers/Profile.php */

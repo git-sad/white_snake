@@ -39,5 +39,5 @@ class Comment_model extends CI_Model {
 	}
 }
 
-/* End of file comment_model.php */
-/* Location: ./application/models/comment_model.php */
+/* End of file Comment_model.php */
+/* Location: ./application/models/Comment_model.php */
