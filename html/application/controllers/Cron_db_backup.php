@@ -7,6 +7,11 @@ class Cron_db_backup extends CI_Controller {
 		$this->load->helper('file');
 		$this->load->dbutil();
 		
+		if($this->input->is_cli_request() === FALSE) {
+			echo 'No execution.<br />';
+			return;
+		}
+		
 		$prefs = array();
 		$prefs['format'] = 'txt';
 		$prefs['add_drop'] = TRUE;
