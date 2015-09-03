@@ -4,7 +4,8 @@ class Cron_notification extends CI_Controller {
 
 	public function log_access($date = NULL) {
 		
-		$this->load->model('Log_access_model', 'log_access');
+		$this->load->model('Blog_Config_model', 'blog_config');
+		$this->load->model('Log_access_model',  'log_access');
 		$this->load->library('email');
 		
 		if($this->input->is_cli_request() === FALSE) {
@@ -12,12 +13,11 @@ class Cron_notification extends CI_Controller {
 			return;
 		}
 		
-		$ary_exempt_host_name = array(
-			'softbank219183047172.bbtec.net:219.183.47.172'  => 0,
-			'c141014.net61215.cablenet.ne.jp:61.215.141.14'  => 0,
-			'c129187.net61215.cablenet.ne.jp:61.215.129.187' => 0,
-			'c141058.net61215.cablenet.ne.jp:61.215.141.58'  => 0
-		);
+		$ary_exempt_host_name = array();
+		$ary_manage_host_namae = $this->blog_config->get_manage_host_name();
+		foreach($ary_manage_host_namae as $val) {
+			$ary_exempt_host_name[$val] = 0;
+		}
 		
 		$date = $date ?: date('Y-m-d', strtotime('- 1 day'));
 		
@@ -49,8 +49,12 @@ class Cron_notification extends CI_Controller {
 		$this->email->set_newline("\r\n");
 		
 		// メール送信
-		$this->email->from('****@****', '****');
-		$this->email->to('****@****');
+		$from_email = $this->blog_config->get_cron_notification_from_email();
+		$from_name  = $this->blog_config->get_cron_notification_from_name();
+		$to_email   = $this->blog_config->get_cron_notification_to_email();
+		
+		$this->email->from($from_email, $from_name);
+		$this->email->to($to_email);
 		$this->email->subject('FourPH Info['.$date.']');
 		$this->email->message($msg);
 		
@@ -62,5 +66,5 @@ class Cron_notification extends CI_Controller {
 	}
 }
 
-/* End of file cron_notification.php */
-/* Location: ./application/controllers/cron_notification.php */
+/* End of file Cron_notification.php */
+/* Location: ./application/controllers/Cron_notification.php */

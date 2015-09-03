@@ -61,5 +61,5 @@ class Article extends MY_Controller {
 	}
 }
 
-/* End of file article.php */
-/* Location: ./application/controllers/article.php */
+/* End of file Article.php */
+/* Location: ./application/controllers/Article.php */

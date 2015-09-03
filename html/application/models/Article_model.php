@@ -25,5 +25,5 @@ class Article_model extends CI_Model {
 	}
 }
 
-/* End of file article_model.php */
-/* Location: ./application/models/article_model.php */
+/* End of file Article_model.php */
+/* Location: ./application/models/Article_model.php */

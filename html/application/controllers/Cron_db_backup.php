@@ -28,5 +28,5 @@ class Cron_db_backup extends CI_Controller {
 	}
 }
 
-/* End of file cron_db_backup.php */
-/* Location: ./application/controllers/cron_db_backup.php */
+/* End of file Cron_db_backup.php */
+/* Location: ./application/controllers/Cron_db_backup.php */

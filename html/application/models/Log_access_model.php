@@ -36,5 +36,5 @@ class Log_access_model extends CI_Model {
 	}
 }
 
-/* End of file log_access_model.php */
-/* Location: ./application/models/log_access_model.php */
+/* End of file Log_access_model.php */
+/* Location: ./application/models/Log_access_model.php */

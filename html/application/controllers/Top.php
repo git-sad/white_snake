@@ -71,5 +71,5 @@ class Top extends MY_Controller {
 	}
 }
 
-/* End of file top.php */
-/* Location: ./application/controllers/top.php */
+/* End of file Top.php */
+/* Location: ./application/controllers/Top.php */
