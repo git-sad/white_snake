@@ -19,9 +19,15 @@ class Log_access_model extends CI_Model {
 	public function insert() {
 		$this->load->driver('session');
 		
+		$ip = $this->input->ip_address();
+		$host_name = gethostbyaddr($ip);
+		if($ip == $host_name) {
+			$host_name = '';
+		}
+		
 		$data = array();
-		$data['la_ip'] = $this->input->ip_address();
-		$data['la_host_name'] = gethostbyaddr($data['la_ip']) ?: '';
+		$data['la_ip'] = $ip;
+		$data['la_host_name'] = $host_name ?: '';
 		$data['la_port'] = $this->input->server('REMOTE_PORT');
 		$data['la_user_agent'] = $this->input->user_agent();
 		$data['la_referrer'] = $this->input->server('HTTP_REFERER') ?: '';
