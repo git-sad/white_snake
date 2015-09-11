@@ -29,10 +29,19 @@ class Article extends MY_Controller {
 			$ary_article[$k]->ac_content = $this->markdown->parse($ary_article[$k]->ac_content);
 		}
 		$comment = $this->comment->get_all($id);
+		
+		$header_data['description']    = 'FourPH管理人です。'.(count($ary_article) <= 0 ? '該当記事無しです！' : $ary_article[0]->ac_title.'について記事にしました！コメントよろしくお願いします。未だ未だ勉強中です。');
+		$header_data['keywords']       = 'FourPH,CodeIgniter,VPS,GitHub,SE,勉強,ブログ,Blog,記事,Article';
+		$header_data['title']          = 'VPS、仮想環境、PHP、CodeIgniter、様々な日常を記録した記事の詳細 | 4 people house';
+		$header_data['header_img_alt'] = 'VPS、仮想環境、PHP、CodeIgniter、様々な日常を記録した記事「4 people house」';
+		$header_data['nav_active']     = 'Home';
+		
 		$data['article'] = $ary_article;
 		$data['comment'] = $comment;
 		
+		$this->load->view($this->get_theme('common/header'), $header_data);
 		$this->load->view($this->get_theme('article'), $data);
+		$this->load->view($this->get_theme('common/footer'));
 	}
 	
 	public function reg_comment($id = 0) {

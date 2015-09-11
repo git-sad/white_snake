@@ -19,7 +19,15 @@ class Profile extends MY_Controller {
 	 */
 	public function index() {
 		
+		$header_data['description']    = 'FourPH管理人のプロフィールです。関東圏に4人家族で生活しているおっさんSEですが、気持ちは若いですよ。PHP、Java、Ruby、C、C++等様々な言語を操るマニアです。お見知り置きを。';
+		$header_data['keywords']       = 'FourPH,CodeIgniter,VPS,ブログ,GitHub,SE,勉強,プロフィール,Profile';
+		$header_data['title']          = 'VPS、仮想環境、PHP、CodeIgniter、様々な日常を記録している人 | 4 people house - Profile';
+		$header_data['header_img_alt'] = 'VPS、仮想環境、PHP、CodeIgniter、様々な日常を記録している人の「4 people house」';
+		$header_data['nav_active']     = 'Profile';
+		
+		$this->load->view($this->get_theme('common/header'), $header_data);
 		$this->load->view($this->get_theme('profile'));
+		$this->load->view($this->get_theme('common/footer'));
 	}
 }
 
