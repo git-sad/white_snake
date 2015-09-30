@@ -58,7 +58,15 @@ class Top extends MY_Controller {
 		$ary_comment_count = array();
 		$ary_article = $this->article->get_all(10, $page);
 		foreach($ary_article as $k => $v) {
-			$ary_article[$k]->ac_content = $this->markdown->parse($ary_article[$k]->ac_content);
+			// 「...続きを読む」対応
+			$ary_article[$k]->ac_content = (array)explode('<!-- more -->', $ary_article[$k]->ac_content);
+			if(1 <= count($ary_article[$k]->ac_content)) {
+				$ary_article[$k]->ac_content[0] = $this->markdown->parse($ary_article[$k]->ac_content[0]);
+			}
+			if(2 <= count($ary_article[$k]->ac_content)) {
+				$ary_article[$k]->ac_content[1] = $this->markdown->parse($ary_article[$k]->ac_content[1]);
+			}
+			
 			$ary_comment_count[$v->ac_id] = $this->comment->get_count_all($v->ac_id);
 		}
 		

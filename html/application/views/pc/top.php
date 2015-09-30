@@ -2,6 +2,7 @@
 
 <? $i = 1; ?>
 <? foreach($article as $ac) { ?>
+	<a href="article<?= $i ?>"></a>
 	<div id="article<?= $i ?>" align="left">
 	<div class="panel panel-info">
 		<div class="panel-heading">
@@ -15,7 +16,13 @@
 			<span class="badge" style="background-color:#FDFF54; color:#000000;">コメ<?= $comment_count[$ac->ac_id] ?></span>
 		</div>
 		<div class="panel-body">
-			<?= $ac->ac_content ?>
+			<? if(count($ac->ac_content) == 1) { ?>
+				<?= $ac->ac_content[0] ?>
+			<? } else if(count($ac->ac_content) == 2) { ?>
+				<?= $ac->ac_content[0] ?>
+				<div class="more_div"><?= $ac->ac_content[1] ?></div>
+				<a href="#article<?= $i ?>" class="more_a">...続きを読む</a>
+			<? } ?>
 			<div id="info<?= $i ?>" align="right">
 			<span class="info" style="font-size:12px; color:#004B91;"><?= $ac->ac_info ?></span>
 			|
